@@ -60,7 +60,7 @@ ROOT_URLCONF = 'course.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [os.path.join(BASE_DIR,'templates')],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -85,7 +85,7 @@ DATABASES = {
         'NAME': 'course',  # Ensure this matches the name in PostgreSQL
         'USER': 'postgres',  # Make sure this user has permissions for the database
         'PASSWORD': '123456',  # Use the correct password
-        'HOST': '127.0.0.1',  # Or 'localhost'
+        'HOST': 'localhost',  # Or '\'
         'PORT': '5432',
     }
 }

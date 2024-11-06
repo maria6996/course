@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+
+<h1>
+    course list
+</h1>
+{% block content %}
+
+{% for item in courses %}
+    {{ item.title }}
+    ({% if item.is_active %}  available {% else %} not available {% endif %})
+    <br>
+{% endfor %}
+
+{%  endblock %}
+

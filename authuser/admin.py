@@ -1,9 +1,8 @@
 from django.contrib import admin
-from authuser.models import User, Course
+from authuser.models import User
 
 
-class CourseAdmin(admin.ModelAdmin):
-    list_display = ('title', 'description', 'price','user')
+class UserAdmin(admin.ModelAdmin):
+    list_display = ('username','email','user_type','mobile','is_active')
 
-admin.site.register(User)
-admin.site.register(Course, CourseAdmin)
+admin.site.register(User,UserAdmin)
