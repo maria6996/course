@@ -1,0 +1,26 @@
+<!-- ml_app/templates/predict_car.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>پیش‌بینی قیمت خودرو</title>
+</head>
+<body>
+    <h1>پیش‌بینی قیمت خودرو</h1>
+    <form method="post" action="{% url 'predict_car_price' %}">
+        {% csrf_token %}
+
+        <label for="brand">برند:</label>
+        <input type="text" id="brand" name="brand" required><br>
+
+        <label for="color">مدل:</label>
+        <input type="text" id="model" name="model" required><br>
+
+
+        <label for="year">سال ساخت:</label>
+        <input type="text" id="year" name="year" required><br>
+
+        <button type="submit">پیش‌بینی کن</button>
+    </form>
+</body>
+</html>

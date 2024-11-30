@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Matplotlib Plot</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        h1 {
+            color: #333;
+        }
+        img {
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            padding: 10px;
+            max-width: 100%;
+            height: auto;
+        }
+    </style>
+</head>
+<body>
+    <h1>Matplotlib Plot in Django</h1>
+    <p>Below is a dynamically generated plot:</p>
+    <img src="data:image/png;base64,{{ plot_image }}" alt="Matplotlib Plot">
+</body>
+</html>

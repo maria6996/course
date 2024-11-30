@@ -27,7 +27,7 @@
 
 
 </head>
-<body>
+<body class="counter-scroll">
 <div id="wrapper">
 
     {#        <div class="preload preload-container">#}
@@ -600,6 +600,8 @@
             </nav>
         </header>
     </div>
+
+{% block slider %} {% endblock %}
 
     <div class="main-content pb-182">
         {% block content %}{% endblock %}

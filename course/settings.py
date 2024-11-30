@@ -42,6 +42,10 @@ INSTALLED_APPS = [
     'authuser.apps.AuthuserConfig',
     'blog.apps.BlogConfig',
     'training.apps.TrainingConfig',
+    'home.apps.HomeConfig',
+    'basket.apps.BasketConfig',
+    'rest_framework',
+    'datascience',
 ]
 AUTH_USER_MODEL = 'authuser.User'
 
@@ -87,7 +91,15 @@ DATABASES = {
         'PASSWORD': '123456',  # Use the correct password
         'HOST': 'localhost',  # Or '\'
         'PORT': '5432',
-    }
+    },
+    'mysql_db': {
+        'ENGINE': 'mysql.connector.django',
+        'NAME': 'store',
+        'USER': 'root',
+        'PASSWORD': '',
+        'HOST': 'localhost',  # or your MySQL host
+        'PORT': '3306',  # Default MySQL port
+    },
 }
 
 

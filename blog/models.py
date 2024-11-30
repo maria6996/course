@@ -13,8 +13,9 @@ class Category(models.Model):
 
 class Article(models.Model):
     title = models.CharField(max_length=100, unique=True)
+    short_description = models.TextField(blank=True, null=True)
     body = models.TextField(blank=True, null=True)
-    user = models.OneToOneField(User, on_delete=models.CASCADE)
+    user = models.ForeignKey(User, on_delete=models.CASCADE)
     category = models.ForeignKey(Category, on_delete=models.CASCADE,default=1)
     created_at = models.DateTimeField(auto_now_add=True)
 
